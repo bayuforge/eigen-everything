@@ -1,0 +1,28 @@
+#include <iostream>
+#include <vector>
+using std::vector;
+
+extern vector<vector<float>> a;
+extern vector<vector<float>> b;
+
+class matrixTools {
+    static vector<float> columnTraversal(vector<vector<float> > &S) {
+        vector<float> s_prime;
+
+        for (int i = 0; i < S.size(); i++) {
+            s_prime[i] = S[i][0];
+        }
+
+        return s_prime;
+    }
+
+    static int dimensionCalculator(vector<vector<float>>& S) {
+        size_t row_length = S.size();
+        size_t column_length = S[0].size();
+        int combined_length[2] = [row_length, column_length];
+
+        return combined_length[0];
+    }
+};
+
+//NOT FINAL CODE
